@@ -121,7 +121,6 @@
 	   await loadScript(highChartJs);				
 	   await loadScript(highChart3DJs);		
            await loadScript(highChartsCylinderJS);
-	   await loadScript(highChartsExportingJS);
            await loadScript(highChartsExportDataJS);
            await loadScript(highChartsAccessiblityJS);
             
