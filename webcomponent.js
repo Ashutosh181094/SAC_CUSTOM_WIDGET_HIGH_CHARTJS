@@ -4,7 +4,6 @@
     const highChartJs = "https://code.highcharts.com/highcharts.js";
     const highChart3DJs = "https://code.highcharts.com/highcharts-3d.js";
     const highChartsCylinderJS = "https://code.highcharts.com/modules/cylinder.js";
-    const highChartsExportingJS="https://code.highcharts.com/modules/exporting.js";
     const highChartsExportDataJS="https://code.highcharts.com/modules/export-data.js";
     const highChartsAccessiblityJS="https://code.highcharts.com/modules/accessibility.js";
     
