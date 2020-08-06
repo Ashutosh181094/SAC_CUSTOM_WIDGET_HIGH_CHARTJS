@@ -84,7 +84,7 @@
     
    
   
-  customElements.define('com-sap-sample-helloworld5', class HelloWorld extends HTMLElement     {
+  customElements.define('com-sap-sample-helloworld7', class HelloWorld extends HTMLElement     {
    constructor() {
 			super(); 
       
