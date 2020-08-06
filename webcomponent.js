@@ -89,12 +89,12 @@
   
   customElements.define('com-sap-sample-helloworld5', class HelloWorld extends HTMLElement     {
    constructor() {
-			super(); 
+   super(); 
       
-      console.log("step-4");
-		   let shadowRoot = this.attachShadow({mode: "open"});
-		   shadowRoot.appendChild(template.content.cloneNode(true));
-       this._firstConnection = false;
+   console.log("step-4");
+   let shadowRoot = this.attachShadow({mode: "open"});
+   shadowRoot.appendChild(template.content.cloneNode(true));
+   this._firstConnection = false;
            
            
         
@@ -116,27 +116,27 @@
         async function LoadLibs(callme) {
         console.log("Step - 7");
         
-					try
+	try
           {
-						console.log("Step-8");
-						await loadScript(highChartJs);				
-						await loadScript(highChart3DJs);		
-            await loadScript(highChartsCylinderJS);
-						await loadScript(highChartsExportingJS);
-            await loadScript(highChartsExportDataJS);
-            await loadScript(highChartsAccessiblityJS);
+	   console.log("Step-8");
+	   await loadScript(highChartJs);				
+	   await loadScript(highChart3DJs);		
+           await loadScript(highChartsCylinderJS);
+	   await loadScript(highChartsExportingJS);
+           await loadScript(highChartsExportDataJS);
+           await loadScript(highChartsAccessiblityJS);
             
-					} 
+	} 
           catch (e) 
           {
-						alert(e);
-					} 
+	  alert(e);
+	  } 
           finally 
           {
           console.log("Step-10");
           callme.redraw();
-					}
-				}
+	}
+	}
         
         console.log("Step-6");
         LoadLibs(this);
