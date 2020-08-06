@@ -74,9 +74,10 @@
 }
 </style>
 
-    <div id="container">
-    </div>
-
+    <figure class="highcharts-figure">
+    <div id="container"></div>
+   
+</figure>
   `;
   
   console.log("Step3");
