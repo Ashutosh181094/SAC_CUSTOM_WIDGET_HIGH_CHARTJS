@@ -77,8 +77,6 @@
     <div id="container">
     </div>
 </figure>
-    
-   
   `;
   
   console.log("Step3");
@@ -88,12 +86,12 @@
   
   customElements.define('com-sap-sample-helloworld5', class HelloWorld extends HTMLElement     {
    constructor() {
-   super(); 
+			super(); 
       
-   console.log("step-4");
-   let shadowRoot = this.attachShadow({mode: "open"});
-   shadowRoot.appendChild(template.content.cloneNode(true));
-   this._firstConnection = false;
+      console.log("step-4");
+		   let shadowRoot = this.attachShadow({mode: "open"});
+		   shadowRoot.appendChild(template.content.cloneNode(true));
+       this._firstConnection = false;
            
            
         
@@ -115,26 +113,27 @@
         async function LoadLibs(callme) {
         console.log("Step - 7");
         
-	try
+					try
           {
-	   console.log("Step-8");
-	   await loadScript(highChartJs);				
-	   await loadScript(highChart3DJs);		
-           await loadScript(highChartsCylinderJS);
-           await loadScript(highChartsExportDataJS);
-           await loadScript(highChartsAccessiblityJS);
+						console.log("Step-8");
+						await loadScript(highChartJs);				
+						await loadScript(highChart3DJs);		
+            await loadScript(highChartsCylinderJS);
+						
+            await loadScript(highChartsExportDataJS);
+            await loadScript(highChartsAccessiblityJS);
             
-	} 
+					} 
           catch (e) 
           {
-	  alert(e);
-	  } 
+						alert(e);
+					} 
           finally 
           {
           console.log("Step-10");
           callme.redraw();
-	}
-	}
+					}
+				}
         
         console.log("Step-6");
         LoadLibs(this);
@@ -202,34 +201,45 @@
         
        
       Highcharts.chart(myChart, {
-      chart: {
-        type: 'cylinder',
+    chart: {
+        type: 'column',
         options3d: {
             enabled: true,
-            alpha: 15,
-            beta: 15,
-            depth: 50,
-            viewDistance: 25
+            alpha: 10,
+            beta: 25,
+            depth: 70
         }
     },
     title: {
-        text: 'Highcharts Cylinder Chart'
+        text: 'Sales Data'
+    },
+    subtitle: {
+        text: 'Sales Data per month'
     },
     plotOptions: {
-        series: {
-            depth: 25,
-            colorByPoint: true
+        column: {
+            depth: 25
+        }
+    },
+    xAxis: {
+        categories: Highcharts.getOptions().lang.shortMonths,
+        labels: {
+            skew3d: true,
+            style: {
+                fontSize: '16px'
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: null
         }
     },
     series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-        name: 'Cylinders',
-        showInLegend: false
+        name: 'Sales',
+        data: [2, 3, null, 4, 0, 5, 1, 4, 6, 3]
     }]
 });
-
-        
-        
    
 
         }
