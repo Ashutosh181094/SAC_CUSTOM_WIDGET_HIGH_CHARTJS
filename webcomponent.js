@@ -37,6 +37,7 @@
   <style>
 #container {
     height: 400px; 
+    margin: 1em auto;
 }
 
 .highcharts-figure, .highcharts-data-table table {
