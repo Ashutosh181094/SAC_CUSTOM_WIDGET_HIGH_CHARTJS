@@ -74,10 +74,10 @@
     background: #f1f7ff;
 }
 </style>
-<figure class="highcharts-figure">
+
     <div id="container">
     </div>
-</figure>
+
   `;
   
   console.log("Step3");
