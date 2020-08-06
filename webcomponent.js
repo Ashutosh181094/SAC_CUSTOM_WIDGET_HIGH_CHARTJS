@@ -36,7 +36,7 @@
   template.innerHTML = `
   <style>
 #container {
-    height: 800px; 
+    height: 400px; 
 }
 
 .highcharts-figure, .highcharts-data-table table {
